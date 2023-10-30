@@ -4,6 +4,7 @@ on:
   repository_dispatch:
     types:
       - build-triggered
+  workflow_call:    
 
 
 jobs:
@@ -11,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v2
+    #- name: Checkout Repo
+    #  uses: actions/checkout@v2
     
     - name: run script
-      id: run script
+      id: run_script
       run: |
         echo "test successful"
       
