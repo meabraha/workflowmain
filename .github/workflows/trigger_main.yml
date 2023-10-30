@@ -1,0 +1,22 @@
+name: main build work flow
+
+on:
+  repository_dispatch:
+    types:
+      - build-triggered
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    #- name: Checkout Repo
+    #  uses: actions/checkout@v2/
+    
+    - name: run script
+      id: run_script
+      run: |
+        echo "test successful"
+      
+      
